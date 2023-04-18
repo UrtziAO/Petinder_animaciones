@@ -1,0 +1,80 @@
+@keyframes entrada {
+    0% {
+        transform: translateX(300px);
+    }
+    25% {
+        transform: translateX(-150px);
+    }
+    50% {
+        transform: translateX(150px);
+    }
+    65% {
+        transform: translateX(-75px);
+    }
+    80% {
+        transform: translateX(50px);
+    }
+    90% {
+        transform: translateX(-25px);
+    }
+    95% {
+        transform: translateX(5px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+.entrada {
+    -webkit-animation: entrada 2s ease-in-out 0s 1 normal both;
+}
+
+
+@keyframes redondearAmpliar {
+    from {
+        border-radius: 0px;
+    }
+    to {
+        border-radius: 50px;
+        transform : scale(1.2, 1.2);
+        border: 3px solid var(--primary-color);
+    }
+}
+
+@keyframes cuadrarReducir {
+    from {
+        border-radius: 50px;
+        border: 3px solid var(--primary-color);
+        transform : scale(1.2, 1.2);
+    }
+    to {
+        border-radius: 0px;
+    }
+}
+
+.search-control {
+    -webkit-animation: cuadrarReducir 0.5s ease-in-out 0s 1 normal both;
+}
+
+.search-control:hover {
+    -webkit-animation: redondearAmpliar 0.5s ease-in-out 0s 1 normal both;
+    
+}
+
+
+/* ANIMACION TRANSICIONES ENTRE PAGINAS */
+
+@keyframes transicion {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.page-about,.page-tshirt,.page-join,.page-home {
+    -webkit-animation: transicion 0.5s ease-in-out 0s 1 normal both;
+}
